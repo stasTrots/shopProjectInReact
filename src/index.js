@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// const h1 = React.createElement("h1",{
+//   id:"test"
+// },"Hello world");
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// const h1 =<h1 id="test2">Hello world 2</h1>
+
+
+function App() {
+    return (
+        <>
+            <h1>Hellow world</h1>
+            <p>loraskdjlskjdslk aksjdaksjdk ajslkd jaslk jdalk kjsld ja dakslj lals jdla ksjd ;askld jassj 
+                kajsdlkasjdalskjdaskljdalkjdaslkdjslakd askdj askl ja
+                j alksjd lakjs dajdl
+            </p>
+
+            
+        </>
+    )
+}
+ReactDOM.render(<App/>,getElementById("root"))
