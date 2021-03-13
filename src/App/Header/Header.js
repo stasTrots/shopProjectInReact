@@ -5,7 +5,7 @@ import './header.css'
 
 import Logo from './Logo/Logo'
 import Menu from './Menu/Menu'
-import Card from './Card/Card'
+import Card from './Cart/Cart'
 
 const Header = () => {
     return (
@@ -19,7 +19,7 @@ const Header = () => {
                                 <Menu/>
                             </div>
                             <div class="col-lg-3">
-                                <Card/>
+                                <Cart/>
                             </div>
                         </div>
                     </div>

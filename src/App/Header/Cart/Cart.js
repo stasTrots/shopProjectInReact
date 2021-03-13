@@ -2,7 +2,7 @@ import React from 'react'
 import './cart.css'
 
 
-const Card = () => {
+const Cart = () => {
     return (
         <div class="cart text-center">
             <div class="products-count">0</div>
@@ -11,4 +11,4 @@ const Card = () => {
     )
 }
 
-export default Card
+export default Cart
