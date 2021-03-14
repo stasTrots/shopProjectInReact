@@ -1,10 +1,10 @@
 import React from 'react'
-
+import logo from './logo.png'
 
 const Logo = () => {
     return (
-        <div class="logo">
-            <img src="img/logo.png" alt=""/>
+        <div className="logo">
+            <img src={logo} alt=""/>
         </div>
     )
 }
