@@ -3,6 +3,21 @@ import React from 'react'
 import './ProductListItem.css'
 
 
+const user = {
+    name:"Ivan",
+    age:20
+}
+
+const {
+    name,
+    age
+} = user
+
+console.log(name)
+
+
+
+
 const ProductListItem = (props) => {
     console.log(props)
     return (
