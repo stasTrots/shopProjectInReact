@@ -46,10 +46,12 @@ ProductListItem.propTypes = {
     description: PropTypes.string,
     type: PropTypes.string.isRequired,
     capacity: PropTypes.number.isRequired,
-    price: PropTypes.number.isRequired
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string
 }
 ProductListItem.defaultProps = {
-    description:"No description...."
+    description:"No description....",
+    image:"images/unnamed.png"
 }
 
 export default ProductListItem
