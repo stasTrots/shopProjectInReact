@@ -1,32 +1,36 @@
 import React from 'react'
-
 import './ProductListItem.css'
 
 
-const user = {
-    name:"Ivan",
-    age:20
-}
+// const user = {
+//     name:"Ivan",
+//     age:20
+// }
 
-const {
+// const {
+//     name,
+//     age
+// } = user
+
+// console.log(name)
+
+
+
+
+const ProductListItem = ({
     name,
-    age
-} = user
-
-console.log(name)
-
-
-
-
-const ProductListItem = (props) => {
-    console.log(props)
+    description,
+    type,
+    capacity,
+    price
+}) => {
     return (
         <div className="product-list-item">
-            <div className="product-title">{props.name}</div>
-            <div className="product-description">This is : {props.name}</div>
-            <div className="product-features">Type: {props.type}</div>
-            <div className="product-features">Capacity: {props.capacity}</div>
-            <div className="product-price">$ {props.price}</div>
+            <div className="product-title">{name}</div>
+            <div className="product-description">{description}</div>
+            <div className="product-features">Type: {type}</div>
+            <div className="product-features">Capacity: {capacity}</div>
+            <div className="product-price">$ {price}</div>
             <button className="btn-add-to-cart">Add to cart</button>
         </div>
     )
