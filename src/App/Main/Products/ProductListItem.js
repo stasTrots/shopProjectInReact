@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './ProductListItem.css'
 
@@ -16,40 +16,53 @@ import './ProductListItem.css'
 // console.log(name)
 
 
+class ProductListItem extends Component {
+    render() {
 
+        const {
+            name,
+            description,
+            type,
+            capacity,
+            price,
+            image,
 
-const ProductListItem = ({
-    name,
-    description,
-    type,
-    capacity,
-    price,
-    image
-}) => {
+        } = this.props
 
-    const [count, setCount] = useState(1);
-
-    return (
-        <div className="product-list-item">
-            <div className="product-img">
-                <img src={image} alt=""/>
+        return (
+            <div className="product-list-item">
+                <div className="product-img">
+                    <img src={image} alt={name}/>
+                </div>
+                <div className="product-title">{name}</div>
+                <div className="product-description">{description}</div>
+                <div className="product-features">Type: {type}</div>
+                <div className="product-features">Capacity: {capacity}</div>
+                <div className="product-quantity">
+                    <button className="decrement-button">-</button>
+                    <input type="text" value={1} readOnly/>
+                    <button className="increment-button">+</button>
+                </div>
+                <div className="product-price">$ {price}</div>
+                <button className="btn-add-to-cart">Add to cart</button>
             </div>
-            <div className="product-title">{name}</div>
-            <div className="product-description">{description}</div>
-            <div className="product-features">Type: {type}</div>
-            <div className="product-features">Capacity: {capacity}</div>
-            <div className="product-quantity">
-                <button className="decrement-button"
-                onClick={() => setCount(count-1)}>-</button>
-                <input type="text" value={count} readOnly/>
-                <button className="increment-button"
-                onClick={() => setCount(count+1)}>+</button>
-            </div>
-            <div className="product-price">$ {price}</div>
-            <button className="btn-add-to-cart">Add to cart</button>
-        </div>
-    )
+        )
+    }
 }
+
+// const ProductListItem = ({
+//     name,
+//     description,
+//     type,
+//     capacity,
+//     price,
+//     image
+// }) => {
+
+
+
+    
+// }
 
 ProductListItem.propTypes = {
     name: PropTypes.string.isRequired,
