@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import './ProductListItem.css'
 
@@ -26,6 +26,9 @@ const ProductListItem = ({
     price,
     image
 }) => {
+
+    const [count, setCount] = useState(1);
+
     return (
         <div className="product-list-item">
             <div className="product-img">
@@ -35,6 +38,13 @@ const ProductListItem = ({
             <div className="product-description">{description}</div>
             <div className="product-features">Type: {type}</div>
             <div className="product-features">Capacity: {capacity}</div>
+            <div className="product-quantity">
+                <button className="decrement-button"
+                onClick={() => setCount(count-1)}>-</button>
+                <input type="text" value={count} readOnly/>
+                <button className="increment-button"
+                onClick={() => setCount(count+1)}>+</button>
+            </div>
             <div className="product-price">$ {price}</div>
             <button className="btn-add-to-cart">Add to cart</button>
         </div>
