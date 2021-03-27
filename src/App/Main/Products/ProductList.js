@@ -3,7 +3,8 @@ import ProductListItem from "./ProductListItem"
 import products from './Products'
 
 
-const ProductList = () => {
+const ProductList = ({productCount}) => {
+    console.log(productCount)
     return (
         <>
             <h1 className="page-title">Product List</h1>
@@ -27,6 +28,7 @@ const ProductList = () => {
                                 capacity={capacity}
                                 price={price}
                                 image={image}
+                                
                             />
                         </div>
                     ))
