@@ -11,7 +11,7 @@ const Main = () => {
                                 filter
                             </div>
                             <div className="col-lg-9">
-                                <ProductList/>
+                                <ProductList />
                             </div>
                         </div>
                     </div>
