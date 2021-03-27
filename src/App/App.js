@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import '../common/reset.css'
 import '../common/base.css'
 
@@ -11,16 +11,27 @@ import Main from './Main/Main'
 
 
 
-const App = () => {
-    return (
+class App extends Component {
+
+    state  = {
+        cartData: {
+            count:10,
+            price:100
+        }
+    }
+    render() {
+        return (
         <>
-            <Header/>
-            <Main/>
-            <Footer/>	
+            <Header cartData={this.state.cartData}/>
+            <Main />
+            <Footer />	
                 
                 
         </>
-    )
+        )
+        
+    }
+    
 }
 
 export default App

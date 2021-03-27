@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import './ProductListItem.css'
 
 
+
 // const user = {
 //     name:"Ivan",
 //     age:20
@@ -33,6 +34,8 @@ class ProductListItem extends Component {
         }))
     }
 
+    
+
     render() {
 
         const {
@@ -50,12 +53,14 @@ class ProductListItem extends Component {
                 <div className="product-img">
                     <img src={image} alt={name}/>
                 </div>
+                <p>Color:green</p>
+                <button>Change color</button>
                 <div className="product-title">{name}</div>
                 <div className="product-description">{description}</div>
                 <div className="product-features">Type: {type}</div>
                 <div className="product-features">Capacity: {capacity}</div>
                 <div className="product-quantity">
-                    <button className="decrement-button"
+                    <button className="decrement-button" disabled={this.state.productCount <=1}
                     onClick={() => this.onDecrementClick()}>-</button>
                     <input type="text" value={this.state.productCount} readOnly/>
                     <button className="increment-button"
