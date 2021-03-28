@@ -3,12 +3,16 @@ import './cart.css'
 
 
 
-const Cart = ({count,price}) => {
-
+const Cart = ({productsInCart}) => {
+    
+    console.log(productsInCart)
     return (
         <div className="cart text-center">
-            <div className="products-count">{count}</div>
-            <div className="products-price">${price}</div>
+            {
+                Object.keys(productsInCart).map(id => (
+                    <div>{id}:{productsInCart[id]}</div>
+                ))
+            }
         </div>
     )
 }

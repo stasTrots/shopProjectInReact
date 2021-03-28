@@ -14,11 +14,11 @@ import Main from './Main/Main'
 class App extends Component {
 
     state  = {
-        cartData: {
-            count:1,
-            price:100
-        },
         
+        productsInCart: {
+            1:3,
+            2:3
+        }
     }
 
     addProductToCart = (count,price) => {
@@ -32,7 +32,7 @@ class App extends Component {
     render() {
         return (
         <>
-            <Header cartData={this.state.cartData}/>
+            <Header productsInCart={this.state.productsInCart}/>
             <Main 
              addProductToCart={this.addProductToCart}
            />
