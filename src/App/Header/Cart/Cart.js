@@ -20,6 +20,11 @@ const Cart = ({productsInCart}) => {
                     <div key={id}>{productObject[id].name} : {productsInCart[id]}</div>
                 ))
             }
+            Total: {
+                keys(productsInCart).reduce((sum, id ) => {
+                    return sum + (productsInCart[id] * productObject[id].price);
+                }, 0)
+            } $
         </div>
     )
 }
