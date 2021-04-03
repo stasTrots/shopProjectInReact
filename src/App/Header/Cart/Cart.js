@@ -17,7 +17,7 @@ const Cart = ({productsInCart}) => {
         <div className="cart text-center">
             {
                 keys(productsInCart).map(id => (
-                    <div key={id}>{products[id-1].name} : {productsInCart[id]}</div>
+                    <div key={id}>{productObject[id].name} : {productsInCart[id]}</div>
                 ))
             }
         </div>
