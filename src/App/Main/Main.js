@@ -17,7 +17,8 @@ const Main = ({
                             <div className="col-lg-9">
                                 {/* <ProductList addProductToCart={addProductToCart}
                                 /> */}
-                                <Route path="/" exact component={ProductList} />
+                                <Route path="/" exact render={() => <ProductList
+                                 addProductToCart={addProductToCart} /> } />
                                 <Route path="/cart" component={CartPage}/>
                             </div>
                         </div>
