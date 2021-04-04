@@ -7,7 +7,8 @@ import ShipPage from './ShipPage/ShipPage'
 
 
 const Main = ({
-    addProductToCart
+    addProductToCart,
+    productsInCart
 }) => {
     return (
         <main className="main">
@@ -21,7 +22,8 @@ const Main = ({
                                 /> */}
                                 <Route path="/" exact render={() => <ProductList
                                  addProductToCart={addProductToCart} /> } />
-                                <Route path="/cart" exact component={CartPage}/>
+                                <Route path="/cart" exact render={() => <CartPage
+                                 productsInCart={productsInCart} /> }/>
                                 <Route path="/paym" exact component={PaymPage}/>
                                 <Route path="/ship" exact component={ShipPage}/>
                             </div>

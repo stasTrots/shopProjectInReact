@@ -34,9 +34,10 @@ class App extends Component {
     render() {
         return (
         <>
-            <Header productsInCart={this.state.productsInCart}/>
+            <Header />
             {/* <button onClick={() => this.addProductToCart(2,5)}>Add to cart</button> */}
             <Main 
+            productsInCart={this.state.productsInCart}
             addProductToCart={this.addProductToCart}
            />
             <Footer />	
