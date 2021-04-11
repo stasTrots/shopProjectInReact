@@ -38,5 +38,9 @@ const products = [
         // image:"images/iphone.png"
     },
 ]
+export const getProductsObject = (array) => array.reduce((obj,product) => ({
+    ...obj,
+    [product.id]:product
+}),{})
 
 export default products

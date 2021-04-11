@@ -1,33 +1,23 @@
 import React from 'react'
-import products from '../../Main/Products/Products'
-import {keys} from "lodash"
+import CartTotal from '../../../Components/Cart/CartTotal'
+import CartProductList from '../../../Components/Cart/CartProductList'
+import CartProductListItemExtended from '../../../Components/Cart/CartProductListItemExtended'
 
-const productObject = products.reduce((obj,product) => ({
-    ...obj,
-    [product.id]:product
-}),{})
-
-const CartPage = ({productsInCart}) => {
+const CartPage = ({
+    productsInCart,
+}) => {
     return (
         <>
-            <h1 className="page-title">Cart page this is lipova dolyna</h1>
-
-            <div >
-            {
-                keys(productsInCart).map(id => (
-                    <div key={id}>{productObject[id].name} : Coun - {productsInCart[id]} : Price 1 - {productObject[id].price}</div>
-                ))
-            }
-            <div>
-            Total: {
-                keys(productsInCart).reduce((sum, id ) => {
-                    return sum + (productsInCart[id] * productObject[id].price);
-                }, 0)
-            } $
-            </div>
-            </div>
+            <h1 className="page-title">Cart</h1>
+            <CartProductList
+                productsInCart={productsInCart}
+                CartItem={CartProductListItemExtended}
+            />
+            <CartTotal
+                productsInCart={productsInCart}
+            />
         </>
-    )
+    )  
 }
 
 export default CartPage
