@@ -1,6 +1,6 @@
 import React from 'react'
 import {keys} from 'lodash'
-import products,{ getProductsObject } from '../../App/Main/Products/products'
+import products,{ getProductsObject } from '../../App/Main/Products/Products'
 
 
 const CartTotal = ({

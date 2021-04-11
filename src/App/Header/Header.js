@@ -8,7 +8,7 @@ import Menu from './Menu/Menu'
 import Cart from './Cart/Cart'
 
 const Header = ({
-    productsInCart
+    productsInCart,
     }) => {
     
     return (
@@ -23,7 +23,8 @@ const Header = ({
                             </div>
                             <div className="col-lg-3">
                                 <Cart 
-                                productsInCart={productsInCart}/>
+                                productsInCart={productsInCart}
+                                />
                             </div>
                         </div>
                     </div>
