@@ -4,6 +4,7 @@ import '../common/base.css'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Main from './Main/Main'
+import { omit } from 'lodash'
 
 
 
@@ -32,15 +33,9 @@ class App extends Component {
         }))
     } 
     removeProductFromCart = (productId) => {
-       this.setState((prevState) => {
-           let prevProductsInCart = {...prevState.prevProductsInCart}
-
-           delete prevProductsInCart[productId]
-
-           return {
-               productsInCart:prevProductsInCart
-           }
-       })
+       this.setState((prevState) => ({
+           productsInCart:omit(prevState.productsInCart,productId)
+       }))
     }
     render() {
         return (
