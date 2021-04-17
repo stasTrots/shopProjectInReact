@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom'
 import CartPage from './CartPage/CartPage'
 import PaymPage from './PaymentPage/PaymPage'
 import ShipPage from './ShipPage/ShipPage'
+import { Testimonials } from '../../Components/Testimonials/Testimonials'
 
 
 const Main = ({
@@ -28,6 +29,7 @@ const Main = ({
                                  removeProductFromCart={removeProductFromCart}/> }/>
                                 <Route path="/paym" exact component={PaymPage}/>
                                 <Route path="/ship" exact component={ShipPage}/>
+                                <Route path="/" exact component={Testimonials}/>
                             </div>
                         </div>
                     </div>
