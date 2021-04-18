@@ -10,7 +10,8 @@ import { Testimonials } from '../../Components/Testimonials/Testimonials'
 const Main = ({
     addProductToCart,
     productsInCart,
-    removeProductFromCart
+    removeProductFromCart,
+    changeProductCount
 }) => {
     return (
         <main className="main">
@@ -26,7 +27,8 @@ const Main = ({
                                  addProductToCart={addProductToCart} /> } />
                                 <Route path="/cart" exact render={() => <CartPage
                                  productsInCart={productsInCart} 
-                                 removeProductFromCart={removeProductFromCart}/> }/>
+                                 removeProductFromCart={removeProductFromCart}
+                                 changeProductCount={changeProductCount}/> }/>
                                 <Route path="/paym" exact component={PaymPage}/>
                                 <Route path="/ship" exact component={ShipPage}/>
                                 <Route path="/" exact component={Testimonials}/>
