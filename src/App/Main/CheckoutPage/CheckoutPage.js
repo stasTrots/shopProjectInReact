@@ -58,7 +58,7 @@ class CheckoutPage extends Component {
             message:this.state.message,
             nallik:this.state.nallik,
             karta:this.state.karta,
-            
+            productsInCart:this.props.productsInCart
         })
         .then(res => res.data)
         .then(({
@@ -84,7 +84,7 @@ class CheckoutPage extends Component {
             productsInCart,
             productsObject = getProductsObject(products),
         } = this.props
-        console.log(this.state)
+        
         
         return(
             <form onSubmit={this.onSend}>

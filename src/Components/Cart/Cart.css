@@ -12,3 +12,15 @@
     justify-content: center;
     margin: 15px auto;
 }
+.btn-remove {
+    width: 150px;
+    height: 40px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: all .4s linear;
+}
+.btn-remove:hover {
+    color: white;
+    background-color: black;
+}
