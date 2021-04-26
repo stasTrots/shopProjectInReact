@@ -2,6 +2,8 @@ import React from 'react'
 import CartTotal from '../../../Components/Cart/CartTotal'
 import CartProductList from '../../../Components/Cart/CartProductList'
 import CartProductListItemExtended from '../../../Components/Cart/CartProductListItemExtended'
+import {Link} from "react-router-dom"
+import {connect} from 'react-redux'
 
 const CartPage = ({
     productsInCart,
@@ -20,8 +22,15 @@ const CartPage = ({
             <CartTotal
                 productsInCart={productsInCart}
             />
+            <Link to="/checkout" className="cartPage-link">Procced to checkout</Link>
         </>
     )  
 }
 
-export default CartPage
+const mapState = (state) => ({
+    productsInCart:state.productsInCart
+})
+export default connect(
+    mapState,
+)(CartPage)
+

@@ -1,0 +1,13 @@
+.footer {
+    background-color: rgba( 255, 255, 255, 0.75);
+    height: 100px;
+    
+}
+.footer-text > p {
+    
+    color: #2c71b8;
+    font-size: 21px;
+    font: lighter;
+    line-height: 100px;
+    text-align: center;
+}

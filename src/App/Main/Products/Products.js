@@ -13,7 +13,7 @@ const products = [
     {
         id:2,
         name:"iPhone 12",
-        // description:"This is :iPhone 12",
+        description:"This is :iPhone 12",
         type:"phone",
         capacity:512,
         price:1500,
@@ -35,7 +35,7 @@ const products = [
         type:"phone",
         capacity:64,
         price:900,
-        // image:"images/iphone.png"
+        image:"images/iphone.png"
     },
 ]
 export const getProductsObject = (array) => array.reduce((obj,product) => ({

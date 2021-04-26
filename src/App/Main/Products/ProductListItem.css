@@ -66,7 +66,7 @@
 .decrement-button, .increment-button {
     width: 30px;
     height: 30px;
-    color: white;
+    color: red;
     background-color: transparent;
     font-size: 24px;
     text-align: center;
@@ -81,5 +81,5 @@
     border: none;
     border-bottom: 2px solid white;
     text-align: center;
-    color: white;
+    color: red;
 }

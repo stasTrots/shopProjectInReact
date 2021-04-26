@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react'
+import './Testimonials.css'
 
 export const Testimonials = () => {
 
@@ -63,15 +64,15 @@ export const Testimonials = () => {
             <hr style={{
                 margin:"25px 0px"
             }}/>
-            <form onSubmit={onSend}>
-                <div>
+            <form onSubmit={onSend} className="form-testim">
+                <div className="test-name">
                     <input type="text" placeholder="Your name" 
                     value={newTestimonials.name}
                     onChange={handleNameChange}/>
                 </div>
-                <div>
+                <div className="test-mess">
                     <textarea placeholder="Your text" 
-                    rows={10} cols={120}
+                    
                     value={newTestimonials.text}
                     onChange={handleTextChange}/>
                 </div>

@@ -25,10 +25,28 @@ body {
 .col-lg-9 {
 	width: 75%;
 }
+.col-md-12 {
+	width: 100%;
+}
 .text-center {
 	text-align: center;
 }
-
+.main {
+	min-height: 100vh;
+}
+.isLiked {
+	border: 1px solid white;
+	background-color: white;
+	width: 40px;
+	height: 40px;
+	font-size: 25px;
+	color: red;
+	border-radius: 50%;
+	transition: all .4s linear;
+}
+.isLiked:hover {
+	transform: rotateY(180deg);
+}
 .page-title {
 	text-align: center;
 	font-size: 36px;

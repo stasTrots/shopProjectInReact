@@ -1,0 +1,79 @@
+.first-name {
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    margin: 15px;
+}
+
+.filter {
+    background:rgba( 86, 141, 198, 0.75);
+    position: relative;
+    
+}
+.filter-button > form > input {
+    width: 210px;
+    height: 50px;
+    margin: 15px;
+    background-color: rgba(44, 113, 184, 0.75);
+    border: 1px solid white;
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+}
+.filter-button {
+    margin: 15px;
+}
+.filter-button > form > input:hover {
+    background-color: black;
+    color: white;
+}
+.checkbox-other {
+    display: block;
+    margin: 15px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+.checkbox-other input[type=checkbox] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0px;
+    height: 0px;
+}
+.checkbox-other span {
+    display: inline-block;
+    color: white;
+    font-size: 21px;
+    font-weight: 300;
+    padding: 0px 0px 0px 30px;
+    line-height: 20px;
+    position: relative;
+}
+.checkbox-other span::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    border: 1px solid white;
+}
+.checkbox-other input[type=checkbox]:checked + span::before {
+    background-color: white;
+}
+.filter-opt {
+    color: white;
+    text-align: center;
+}
+.filter-type {
+    padding: 15px 0px;
+}
+.filter-color {
+    padding: 15px 0px;
+}
+.filter-ram {
+    padding: 15px 0px;
+}

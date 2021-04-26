@@ -9,6 +9,7 @@ import Cart from './Cart/Cart'
 
 const Header = ({
     productsInCart,
+    products
     }) => {
     
     return (
@@ -24,6 +25,7 @@ const Header = ({
                             <div className="col-lg-3">
                                 <Cart 
                                 productsInCart={productsInCart}
+                                products={products}
                                 />
                             </div>
                         </div>

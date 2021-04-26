@@ -4,7 +4,8 @@ import products from './Products'
 
 
 const ProductList = ({
-    addProductToCart
+    addProductToCart,
+    
 }) => {
     
     return (

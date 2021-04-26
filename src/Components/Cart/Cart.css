@@ -1,0 +1,14 @@
+.cart-total {
+    color: red;
+    font-size: 21px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.cartPage-link {
+    color: white;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+}
